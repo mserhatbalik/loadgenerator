@@ -27,5 +27,10 @@
                     }
                 }
             }
+            stage('Confirming build success') {
+                steps{  
+                    writeFile file: 'loadgenerator.txt', text: 'Build is completed successfully.'
+                    }
+            }
         }
     }
